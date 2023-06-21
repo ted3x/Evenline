@@ -1,0 +1,19 @@
+<!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 12:06 AM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/22/23, 12:05 AM
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M5,18V18.01M9,6H20H9ZM9,12H20H9ZM9,18H20H9ZM5,6V6.01V6ZM5,12V12.01V12Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#111827"
+      android:strokeLineCap="round"/>
+</vector>
