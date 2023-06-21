@@ -1,7 +1,13 @@
+/*
+ * Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+ * Copyright (c) 2023 . All rights reserved.
+ * Last modified 6/21/23, 11:28 PM
+ */
+
 package ge.ted3x.evenline.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
@@ -14,7 +20,9 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject lateinit var navigatorHolder: NavigatorHolder
+
     @Inject lateinit var navigator: AppNavigator
+
     @Inject lateinit var router: Router
 
     override fun onCreate(savedInstanceState: Bundle?) {

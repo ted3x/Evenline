@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/21/23, 11:28 PM
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
