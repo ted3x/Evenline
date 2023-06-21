@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:56 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/21/23, 11:38 PM
+  -->
+
+<resources>
+    
+    <style name="Label_Heading_1">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_48</item>
+    </style>
+
+    <style name="Label_Heading_2">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_40</item>
+    </style>
+
+    <style name="Label_Heading_3">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_32</item>
+    </style>
+
+    <style name="Label_Heading_4">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_24</item>
+    </style>
+
+    <style name="Label_Heading_5">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_20</item>
+    </style>
+
+    <style name="Label_Heading_6">
+        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_18</item>
+    </style>
+</resources>

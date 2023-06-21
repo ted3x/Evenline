@@ -1,16 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:56 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/21/23, 11:28 PM
+  ~ Last modified 6/21/23, 11:56 PM
   -->
 
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!--    Primary    -->
+
+    <color name="color_primary_base">#FF8142</color>
+    <color name="color_primary_400">#FF9C6A</color>
+    <color name="color_primary_300">#FFB895</color>
+    <color name="color_primary_200">#FFD5C0</color>
+    <color name="color_primary_100">#FFF2EC</color>
+
+    <!--    Secondary    -->
+
+    <color name="color_secondary_base">#00334E</color>
+    <color name="color_secondary_400">#1E6A92</color>
+    <color name="color_secondary_300">#57AAD6</color>
+    <color name="color_secondary_200">#BAE7FF</color>
+    <color name="color_secondary_100">#F5FBFF</color>
+
+    <!--    Alert Success    -->
+
+    <color name="color_alert_success_base">#22C55E</color>
+    <color name="color_alert_success_dark">#16A34A</color>
+    <color name="color_alert_success_light">#4ADE80</color>
+
+    <!--    Alert Warning    -->
+
+    <color name="color_alert_warning_base">#FACC15</color>
+    <color name="color_alert_warning_dark">#EAB308</color>
+    <color name="color_alert_warning_light">#FDE047</color>
+
+    <!--    Alert Error    -->
+
+    <color name="color_alert_error_base">#FF4747</color>
+    <color name="color_alert_error_dark">#DD3333</color>
+    <color name="color_alert_error_light">#FF7171</color>
+
+    <!--    Grayscale    -->
+
+    <color name="color_grayscale_50">#F9FAFB</color>
+    <color name="color_grayscale_100">#F3F4F6</color>
+    <color name="color_grayscale_200">#E5E7EB</color>
+    <color name="color_grayscale_300">#D1D5DB</color>
+    <color name="color_grayscale_400">#9CA3AF</color>
+    <color name="color_grayscale_500">#6B7280</color>
+    <color name="color_grayscale_600">#4B5563</color>
+    <color name="color_grayscale_700">#374151</color>
+    <color name="color_grayscale_800">#1F2937</color>
+    <color name="color_grayscale_900">#111827</color>
+
+    <!--    Other    -->
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_blue">#3B82F6</color>
+    <color name="color_amber">#FCD34D</color>
+    <color name="color_portage">#887EF9</color>
+    <color name="color_camaron">#FF8092</color>
 </resources>

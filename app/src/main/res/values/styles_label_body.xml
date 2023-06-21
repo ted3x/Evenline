@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:56 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/21/23, 11:42 PM
+  -->
+
+<resources>
+
+    <!--  Label Body Extra Large  -->
+
+    <style name="Label_Body_XLarge_ExtraBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_extra_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_18</item>
+    </style>
+
+    <style name="Label_Body_XLarge_SemiBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_semi_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_18</item>
+    </style>
+
+    <style name="Label_Body_XLarge_Medium">
+        <item name="android:fontFamily">@font/noto_sans_jp_medium</item>
+        <item name="android:textSize">@dimen/dimen_sp_18</item>
+    </style>
+
+    <style name="Label_Body_XLarge_Regular">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textSize">@dimen/dimen_sp_18</item>
+    </style>
+
+    <!--  Label Body Large  -->
+
+    <style name="Label_Body_Large_ExtraBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_extra_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_16</item>
+    </style>
+
+    <style name="Label_Body_Large_SemiBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_semi_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_16</item>
+    </style>
+
+    <style name="Label_Body_Large_Medium">
+        <item name="android:fontFamily">@font/noto_sans_jp_medium</item>
+        <item name="android:textSize">@dimen/dimen_sp_16</item>
+    </style>
+
+    <style name="Label_Body_Large_Regular">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textSize">@dimen/dimen_sp_16</item>
+    </style>
+
+    <!--  Label Body Medium  -->
+
+    <style name="Label_Body_Medium_ExtraBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_extra_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_14</item>
+    </style>
+
+    <style name="Label_Body_Medium_SemiBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_semi_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_14</item>
+    </style>
+
+    <style name="Label_Body_Medium_Medium">
+        <item name="android:fontFamily">@font/noto_sans_jp_medium</item>
+        <item name="android:textSize">@dimen/dimen_sp_14</item>
+    </style>
+
+    <style name="Label_Body_Medium_Regular">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textSize">@dimen/dimen_sp_14</item>
+    </style>
+
+    <!--  Label Body Small  -->
+
+    <style name="Label_Body_Small_ExtraBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_extra_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_12</item>
+    </style>
+
+    <style name="Label_Body_Small_SemiBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_semi_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_12</item>
+    </style>
+
+    <style name="Label_Body_Small_Medium">
+        <item name="android:fontFamily">@font/noto_sans_jp_medium</item>
+        <item name="android:textSize">@dimen/dimen_sp_12</item>
+    </style>
+
+    <style name="Label_Body_Small_Regular">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textSize">@dimen/dimen_sp_12</item>
+    </style>
+
+    <!--  Label Body Extra Small  -->
+
+    <style name="Label_Body_XSmall_ExtraBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_extra_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_10</item>
+    </style>
+
+    <style name="Label_Body_XSmall_SemiBold">
+        <item name="android:fontFamily">@font/noto_sans_jp_semi_bold</item>
+        <item name="android:textSize">@dimen/dimen_sp_10</item>
+    </style>
+
+    <style name="Label_Body_XSmall_Medium">
+        <item name="android:fontFamily">@font/noto_sans_jp_medium</item>
+        <item name="android:textSize">@dimen/dimen_sp_10</item>
+    </style>
+
+    <style name="Label_Body_XSmall_Regular">
+        <item name="android:fontFamily">@font/noto_sans_jp_regular</item>
+        <item name="android:textSize">@dimen/dimen_sp_10</item>
+    </style>
+</resources>
