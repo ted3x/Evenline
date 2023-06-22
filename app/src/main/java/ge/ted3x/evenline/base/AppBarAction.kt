@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 9:59 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 7:35 PM
+ * Last modified 6/22/23, 9:42 PM
  */
 
 package ge.ted3x.evenline.base
@@ -23,6 +23,7 @@ sealed class AppBarAction {
             return MaterialButton(context, null, R.attr.appBarActionButtonStyle).apply {
                 setOnClickListener { onClick.invoke() }
                 setIconResource(iconRes)
+                iconSize = context.resources.getDimensionPixelSize(R.dimen.dimen_p_24)
             }
         }
     }
