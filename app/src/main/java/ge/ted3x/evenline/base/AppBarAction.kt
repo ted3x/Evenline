@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:38 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 6:23 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 5:24 PM
+ * Last modified 6/22/23, 6:22 PM
  */
 
 package ge.ted3x.evenline.base
@@ -20,7 +20,7 @@ sealed class AppBarAction {
     abstract fun getView(context: Context): View
     data class Icon(@DrawableRes val iconRes: Int, val onClick: () -> Unit) : AppBarAction() {
         override fun getView(context: Context): View {
-            return MaterialButton(context, null, R.style.Button_AppBar_Action).apply {
+            return MaterialButton(context, null, R.attr.appBarActionButtonStyle).apply {
                 setOnClickListener { onClick.invoke() }
                 setIconResource(iconRes)
             }

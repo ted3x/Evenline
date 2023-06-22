@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:41 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 6:23 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/22/23, 5:41 PM
+  ~ Last modified 6/22/23, 5:59 PM
   --><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,9 +21,8 @@
             android:id="@+id/appbarBackButton"
             style="@style/Button_AppBar_Action"
             android:layout_marginStart="@dimen/dimen_p_24"
-            android:visibility="gone"
+            android:visibility="visible"
             app:icon="@drawable/ic_arrow_narrow_left"
-            app:iconTint="@color/color_grayscale_900"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
