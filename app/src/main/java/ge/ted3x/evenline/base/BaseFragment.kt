@@ -1,10 +1,8 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:41 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/21/23, 11:28 PM
- */
-
-package ge.ted3x.evenline.base
+ * Last modified 6/22/23, 5:41 PM
+ */package ge.ted3x.evenline.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
