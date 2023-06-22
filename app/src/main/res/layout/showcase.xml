@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 3:41 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/22/23, 1:27 PM
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".presentation.splash.SplashFragment">
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button_Primary"
+        android:layout_width="@dimen/dimen_p_327"
+        android:layout_height="@dimen/dimen_p_56"
+        android:text="Button" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button_Secondary"
+        android:layout_width="match_parent"
+        android:text="Button" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button_Social"
+        android:layout_width="match_parent"
+        android:text="Button" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox style="@style/BaseCheckbox" />
+
+    <androidx.appcompat.widget.AppCompatRadioButton style="@style/BaseRadioButton" />
+
+    <androidx.appcompat.widget.SwitchCompat style="@style/BaseSwitch" />
+
+    <ge.ted3x.evenline.components.InputField
+        android:id="@+id/testField"
+        style="@style/BaseInputField"
+        android:layout_width="@dimen/dimen_p_327"
+        android:drawableStart="@drawable/ic_user"
+        android:drawableEnd="@drawable/ic_user"
+        android:drawablePadding="@dimen/dimen_p_12"
+        android:hint="Your name" />
+
+
+    <ge.ted3x.evenline.components.InputField
+        style="@style/BaseInputField.Password"
+        android:layout_width="@dimen/dimen_p_327" />
+
+    <ge.ted3x.evenline.components.InputField
+        style="@style/BaseInputField.PhoneNumber"
+        android:layout_width="@dimen/dimen_p_327" />
+</LinearLayout>

@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 3:41 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/21/23, 11:28 PM
+  ~ Last modified 6/22/23, 1:41 PM
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_primary_base"
     tools:context=".presentation.splash.SplashFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
-
+        style="@style/Label_Heading_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="evenline"
+        android:textColor="@color/color_white" />
 </FrameLayout>
