@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:39 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 5:39 PM
+ * Last modified 6/22/23, 7:35 PM
  */
 
 package ge.ted3x.evenline.presentation.onboarding
@@ -16,11 +16,11 @@ class OnboardingFragment : BaseFragment<OnboardingViewModel>(R.layout.fragment_o
 
     override val viewModelClass = OnboardingViewModel::class
 
-    override fun getAppBarActions(): List<AppBarAction>? {
+    override fun getAppBarActions(): List<AppBarAction> {
         return listOf(
             AppBarAction.Text(
                 "SKIP",
-                R.style.Label_Body_Medium_ExtraBold,
+                R.style.Label_Body_Medium_Medium,
                 R.color.color_primary_base
             ) {
             }

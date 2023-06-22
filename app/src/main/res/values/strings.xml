@@ -1,9 +1,12 @@
 <!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:28 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/21/23, 11:28 PM
+  ~ Last modified 6/22/23, 7:35 PM
   -->
 
 <resources>
     <string name="app_name">Evenline</string>
+    <string name="onboarding_title_1">Discover great events at your fingertips</string>
+    <string name="onboarding_description_1">Find and attend events that fuel their passions. From music festivals, arts, conferences, and fundraisers, to gaming competitions.</string>
+    <string name="onboarding_get_started">Get Started</string>
 </resources>

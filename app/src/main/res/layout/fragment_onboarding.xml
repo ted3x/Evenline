@@ -1,19 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 6:23 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/22/23, 5:57 PM
+  ~ Last modified 6/22/23, 7:35 PM
   -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimen_p_24"
+    android:paddingVertical="@dimen/dimen_p_16"
     tools:context=".presentation.onboarding.OnboardingFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Onboarding" />
+        android:id="@+id/onboardingTitle"
+        style="@style/Label_Heading.4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_p_39"
+        android:text="@string/onboarding_title_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/onboardingDescription"
+        style="@style/Label_Body_Medium_Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_description_1"
+        app:layout_constraintTop_toBottomOf="@id/onboardingTitle" />
+
+    <ImageView
+        android:id="@+id/onboardingImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_p_56"
+        android:src="@drawable/img_onboarding_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onboardingDescription" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Button_Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_get_started"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

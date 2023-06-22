@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 6:23 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/22/23, 5:59 PM
+  ~ Last modified 6/22/23, 7:35 PM
   --><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,7 +21,7 @@
             android:id="@+id/appbarBackButton"
             style="@style/Button_AppBar_Action"
             android:layout_marginStart="@dimen/dimen_p_24"
-            android:visibility="visible"
+            android:visibility="gone"
             app:icon="@drawable/ic_arrow_narrow_left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,12 +37,13 @@
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
+            app:layout_goneMarginStart="@dimen/dimen_p_64"
             android:textColor="@color/color_grayscale_900"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/appbarActions"
             app:layout_constraintStart_toEndOf="@id/appbarBackButton"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="appbasdaasdasdasdasdasdasdasdsadasdar" />
+            tools:text="appbasdaasdasr" />
 
         <LinearLayout
             android:id="@+id/appbarActions"

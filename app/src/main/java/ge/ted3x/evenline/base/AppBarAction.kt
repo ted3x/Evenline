@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 6:23 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 6:22 PM
+ * Last modified 6/22/23, 7:35 PM
  */
 
 package ge.ted3x.evenline.base
@@ -35,7 +35,7 @@ sealed class AppBarAction {
     ) : AppBarAction() {
         override fun getView(context: Context): View {
             return TextView(context).apply {
-                this.text = text
+                text = this@Text.text
                 setTextAppearance(textStyle)
                 setTextColor(context.getColor(textColorRes))
                 setOnClickListener { onClick.invoke() }

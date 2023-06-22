@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/21/23, 11:56 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:35 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/21/23, 11:38 PM
+  ~ Last modified 6/22/23, 7:35 PM
   -->
 
 <resources>
-    
-    <style name="Label_Heading_1">
+
+    <style name="Label_Heading">
+        <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+        <item name="android:textColor">@color/color_grayscale_900</item>
+    </style>
+
+    <style name="Label_Heading.1" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_48</item>
     </style>
 
-    <style name="Label_Heading_2">
-        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+    <style name="Label_Heading.2" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_40</item>
     </style>
 
-    <style name="Label_Heading_3">
-        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+    <style name="Label_Heading.3" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_32</item>
     </style>
 
-    <style name="Label_Heading_4">
-        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+    <style name="Label_Heading.4" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_24</item>
     </style>
 
-    <style name="Label_Heading_5">
-        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+    <style name="Label_Heading.5" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_20</item>
     </style>
 
-    <style name="Label_Heading_6">
-        <item name="android:fontFamily">@font/noto_sans_jp_bold</item>
+    <style name="Label_Heading.6" parent="Label_Heading">
         <item name="android:textSize">@dimen/dimen_sp_18</item>
     </style>
 </resources>
