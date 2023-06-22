@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 9:52 AM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/22/23, 9:47 AM
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:dither="true" android:shape="rectangle" android:useLevel="false" android:visible="true">
+            <solid android:color="@color/color_primary_base"/>
+            <corners android:radius="25dp" />
+            <size android:width="50dp" android:height="25dp" />
+
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:dither="true" android:shape="rectangle" android:useLevel="false" android:visible="true">
+            <solid android:color="@color/color_grayscale_200"/>
+            <corners android:radius="25dp" />
+            <size android:width="50dp" android:height="25dp" />
+        </shape>
+    </item>
+</selector>
