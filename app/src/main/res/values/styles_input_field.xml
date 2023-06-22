@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 1:27 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 9:36 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/22/23, 1:27 PM
+  ~ Last modified 6/22/23, 9:30 PM
   -->
 
 <resources>
@@ -9,12 +9,15 @@
     <style name="BaseInputField">
         <item name="android:layout_height">@dimen/dimen_p_56</item>
         <item name="android:background">@drawable/selector_edit_text</item>
-        <item name="hintTextColor">@color/color_grayscale_400</item>
         <item name="android:paddingStart">@dimen/dimen_p_20</item>
         <item name="android:paddingEnd">@dimen/dimen_p_20</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="hintTextAppearance">@style/Label_Body_Medium_Regular</item>
+        <item name="android:drawablePadding">@dimen/dimen_p_12</item>
         <item name="android:textAppearance">@style/Label_Body_Medium_Medium</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_drawable</item>
+        <item name="drawableTint">@color/color_grayscale_400</item>
+        <item name="hintTextColor">@color/color_grayscale_400</item>
+        <item name="hintTextAppearance">@style/Label_Body_Medium_Regular</item>
     </style>
 
     <style name="BaseInputField.Label" parent="BaseInputField">
@@ -23,7 +26,6 @@
         <item name="hintTextColor">@color/color_grayscale_400</item>
         <item name="android:paddingStart">@dimen/dimen_p_20</item>
         <item name="android:paddingEnd">@dimen/dimen_p_20</item>
-        <item name="android:drawablePadding">@dimen/dimen_p_12</item>
         <item name="android:gravity">center_vertical</item>
         <item name="hintTextAppearance">@style/Label_Body_Medium_Regular</item>
         <item name="android:textAppearance">@style/Label_Body_Medium_Medium</item>
@@ -33,13 +35,11 @@
     <style name="BaseInputField.Password" parent="BaseInputField">
         <item name="android:drawableStart">@drawable/ic_lock</item>
         <item name="android:drawableEnd">@drawable/ic_eye_off</item>
-        <item name="android:drawableTint">@color/color_grayscale_400</item>
         <item name="android:inputType">textPassword</item>
     </style>
 
     <style name="BaseInputField.PhoneNumber" parent="BaseInputField">
         <item name="android:drawableStart">@drawable/ic_phone</item>
-        <item name="android:drawableTint">@color/color_grayscale_400</item>
         <item name="android:inputType">number</item>
     </style>
 </resources>

@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:40 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/22/23, 9:36 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 5:40 PM
+ * Last modified 6/22/23, 9:36 PM
  */
 
 package ge.ted3x.evenline.presentation.activity
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         supportFragmentManager.addOnBackStackChangedListener {
-            binding.appbarBackButton.visibility = if (supportFragmentManager.backStackEntryCount > 1) View.VISIBLE else View.GONE
+            binding.appbarBackButton.visibility = if (supportFragmentManager.backStackEntryCount > 0) View.VISIBLE else View.GONE
         }
         binding.appbarBackButton.setOnClickListener { router.exit() }
         router.newRootScreen(Screens.Splash())
