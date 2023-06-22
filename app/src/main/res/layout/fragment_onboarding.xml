@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 7:38 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 8:57 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/22/23, 7:37 PM
+  ~ Last modified 6/22/23, 7:43 PM
   -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,4 +48,5 @@
         android:layout_height="wrap_content"
         android:text="@string/onboarding_get_started"
         app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
