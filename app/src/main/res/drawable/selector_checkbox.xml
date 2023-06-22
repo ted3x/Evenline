@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/22/23, 12:34 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/22/23, 11:07 AM
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bkg_checkbox_selected" android:state_checked="true" />
+    <item android:drawable="@drawable/shape_not_selected" android:state_checked="false" />
+
+</selector>
