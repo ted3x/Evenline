@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:40 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/23/23, 5:16 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 5:39 PM
+ * Last modified 6/23/23, 5:16 PM
  */
 
 package ge.ted3x.evenline.presentation.splash
@@ -13,12 +13,14 @@ import ge.ted3x.evenline.data.SharedPreferencesHandler
 import ge.ted3x.evenline.screens.Screens
 import ge.ted3x.evenline.utils.EvenlineConstants
 import javax.inject.Inject
+import kotlinx.coroutines.CoroutineDispatcher
 
 @HiltViewModel
 class SplashViewModel @Inject constructor(
+    dispatcher: CoroutineDispatcher,
     sharedPreferencesHandler: SharedPreferencesHandler,
     private val router: Router
-) : BaseViewModel() {
+) : BaseViewModel(dispatcher) {
 
     private val isOnboarded = sharedPreferencesHandler.readBoolean(
         EvenlineConstants.EVENLINE_IS_ONBOARDED
