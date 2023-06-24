@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/23/23, 5:16 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/24/23, 1:25 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/23/23, 5:16 PM
+ * Last modified 6/24/23, 1:25 PM
  */
 
 package ge.ted3x.evenline.base.network
@@ -13,16 +13,16 @@ class EvenlineNetworkBuilder<Result> {
     private lateinit var onSuccess: (Result) -> Unit
     private var onError: ((EvenlineException) -> Unit)? = null
 
-    fun <Result> EvenlineNetworkBuilder<Result>.onLoading(callback: () -> Unit) = apply {
+    fun onLoading(callback: () -> Unit) = apply {
         onLoading = callback
     }
-    fun <Result> EvenlineNetworkBuilder<Result>.onExecute(callback: suspend () -> Result) = apply {
+    fun onExecute(callback: suspend () -> Result) = apply {
         onExecute = callback
     }
-    fun <Result> EvenlineNetworkBuilder<Result>.onSuccess(callback: (Result) -> Unit) = apply {
+    fun onSuccess(callback: (Result) -> Unit) = apply {
         onSuccess = callback
     }
-    fun <Result> EvenlineNetworkBuilder<Result>.onError(callback: (EvenlineException) -> Unit) = apply {
+    fun onError(callback: (EvenlineException) -> Unit) = apply {
         onError = callback
     }
 
