@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/24/23, 2:00 PM
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bkg_edit_text_selected_error" android:state_focused="true" />
+    <item android:drawable="@drawable/bkg_edit_text_not_selected_error" android:state_focused="false" />
+
+</selector>

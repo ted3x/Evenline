@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 9:36 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 9:24 PM
+ * Last modified 6/24/23, 1:27 PM
  */
 
 package ge.ted3x.evenline.screens
@@ -21,4 +21,6 @@ object Screens {
     fun Auth() = FragmentScreen { AuthFragment() }
 
     fun SignUp() = FragmentScreen { SignUpFragment() }
+
+    fun Dashboard() = FragmentScreen { SignUpFragment() }
 }

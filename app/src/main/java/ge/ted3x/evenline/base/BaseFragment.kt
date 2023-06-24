@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 5:41 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 5:41 PM
+ * Last modified 6/24/23, 1:45 PM
  */package ge.ted3x.evenline.base
 
 import android.os.Bundle
@@ -9,9 +9,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import ge.ted3x.evenline.presentation.activity.MainActivity
 import kotlin.reflect.KClass
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 abstract class BaseFragment<VM : BaseViewModel>(private val layoutRes: Int) : Fragment(layoutRes) {
 
@@ -45,4 +51,12 @@ abstract class BaseFragment<VM : BaseViewModel>(private val layoutRes: Int) : Fr
     abstract fun onBindViewModel(vm: VM)
 
     open fun getAppBarActions(): List<AppBarAction>? = null
+
+    protected fun <T> StateFlow<T>.collectState(block: (T) -> Unit) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                this@collectState.collectLatest { block.invoke(it) }
+            }
+        }
+    }
 }

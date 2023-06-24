@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/22/23, 1:27 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/22/23, 1:27 PM
+ * Last modified 6/24/23, 2:03 PM
  */
 
 package ge.ted3x.evenline.components
@@ -12,6 +12,8 @@ import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.MotionEvent
+import androidx.core.widget.doOnTextChanged
+import ge.ted3x.evenline.R
 import ge.ted3x.evenline.components.InputFieldDrawableClickListener.DrawablePosition
 
 class InputField @JvmOverloads constructor(
@@ -27,6 +29,14 @@ class InputField @JvmOverloads constructor(
     private var actionY = 0
 
     private var clickListener: InputFieldDrawableClickListener? = null
+
+    private var isError = false
+
+    init {
+        doOnTextChanged { _, _, _, _ ->
+            setErrorState(false)
+        }
+    }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -149,6 +159,15 @@ class InputField @JvmOverloads constructor(
 
     fun setDrawableClickListener(listener: InputFieldDrawableClickListener?) {
         clickListener = listener
+    }
+
+    fun setErrorState(isError: Boolean) {
+        this.isError = isError
+        background = if (isError) {
+            context.getDrawable(R.drawable.selector_edit_text_error)
+        } else {
+            context.getDrawable(R.drawable.selector_edit_text)
+        }
     }
 }
 
