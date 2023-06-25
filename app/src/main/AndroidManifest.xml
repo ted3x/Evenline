@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/24/23, 2:08 PM
+  ~ Last modified 6/25/23, 8:14 PM
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".EvenlineApp"
@@ -28,6 +27,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter android:label="test">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="evenline.app"
+                    android:pathPrefix="/" />
+                <!-- note that the leading "/" is required for pathPrefix-->
+            </intent-filter>
+
         </activity>
     </application>
 

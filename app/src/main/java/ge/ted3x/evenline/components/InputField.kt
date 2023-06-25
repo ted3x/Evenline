@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:22 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 6:20 PM
+ * Last modified 6/25/23, 8:14 PM
  */
 
 package ge.ted3x.evenline.components
@@ -21,6 +21,9 @@ class InputField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null
 ) : androidx.appcompat.widget.AppCompatEditText(context, attrs) {
+
+    val text get() = this.getText().toString()
+
     private var drawableRight: Drawable? = null
     private var drawableLeft: Drawable? = null
     private var drawableTop: Drawable? = null

@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:00 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:57 PM
+ * Last modified 6/25/23, 8:14 PM
  */
 
 package ge.ted3x.evenline.presentation.signin
@@ -35,5 +35,9 @@ class SignInViewModel @Inject constructor(
             onSuccess { router.newRootScreen(Screens.Dashboard()) }
             onError { showSnackbar(it.message) }
         }
+    }
+
+    fun navigateToForgotPassword() {
+        router.navigateTo(Screens.ForgotPassword())
     }
 }

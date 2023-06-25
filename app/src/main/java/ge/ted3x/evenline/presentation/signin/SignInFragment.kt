@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:30 PM
+ * Last modified 6/25/23, 8:14 PM
  */
 
 package ge.ted3x.evenline.presentation.signin
@@ -25,5 +25,6 @@ class SignInFragment : BaseFragment<SignInViewModel>(R.layout.fragment_sign_in) 
             val password = binding.signInPassword.text.toString()
             vm.onSignIn(email, password)
         }
+        binding.forgotPassword.setOnClickListener { vm.navigateToForgotPassword() }
     }
 }
