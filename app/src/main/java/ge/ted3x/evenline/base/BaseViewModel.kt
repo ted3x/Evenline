@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/23/23, 5:16 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/23/23, 5:16 PM
+ * Last modified 6/25/23, 5:30 PM
  */
 
 package ge.ted3x.evenline.base
@@ -11,10 +11,14 @@ import androidx.lifecycle.viewModelScope
 import ge.ted3x.evenline.base.network.EvenlineNetworkBuilder
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel(private val dispatcher: CoroutineDispatcher) : ViewModel() {
 
+    val snackBarMessage get() = _snackBarMessage.asSharedFlow()
+    private val _snackBarMessage = MutableSharedFlow<String>()
     protected fun BaseViewModel.execute(block: suspend CoroutineScope.() -> Unit) {
         viewModelScope.launch(dispatcher) { block.invoke(this) }
     }
@@ -26,5 +30,9 @@ abstract class BaseViewModel(private val dispatcher: CoroutineDispatcher) : View
             val builder = EvenlineNetworkBuilder<Result>().apply { networkBuilder() }
             builder.execute()
         }
+    }
+
+    protected suspend fun setSnackBarMessage(message: String) {
+        _snackBarMessage.emit(message)
     }
 }

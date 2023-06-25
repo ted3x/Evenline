@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/23/23, 5:16 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/23/23, 5:16 PM
+ * Last modified 6/25/23, 5:34 PM
  */
 
 package ge.ted3x.evenline.presentation.auth
@@ -19,5 +19,9 @@ class AuthViewModel @Inject constructor(dispatcher: CoroutineDispatcher, private
 
     fun navigateToSignUp() {
         router.navigateTo(Screens.SignUp())
+    }
+
+    fun navigateToSignIn() {
+        router.navigateTo(Screens.SignIn())
     }
 }

@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/24/23, 1:59 PM
+ * Last modified 6/25/23, 5:30 PM
  */
 
 package ge.ted3x.evenline.presentation.signup
@@ -28,7 +28,7 @@ class SignUpFragment : BaseFragment<SignUpViewModel>(R.layout.fragment_sign_up) 
             vm.onSignUp(fullName, email, password)
         }
 
-        vm.uiState.collectState {
+        vm.uiState.collectFlow {
             it.errorMessage?.let { msg -> Snackbar.make(requireView(), msg, Snackbar.LENGTH_SHORT).show() }
             binding.signUpYourName.setErrorState(!it.isFullNameValid)
             binding.signUpEmail.setErrorState(!it.isEmailValid)

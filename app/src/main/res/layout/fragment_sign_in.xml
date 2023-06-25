@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/25/23, 5:53 PM
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingHorizontal="@dimen/dimen_p_24"
+    android:paddingVertical="@dimen/dimen_p_32"
+    android:paddingBottom="@dimen/dimen_p_12"
+    tools:context=".presentation.signup.SignUpFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/signInTitle"
+            style="@style/Label_Heading.4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sign_in_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/signInDescription"
+            style="@style/Label_Body_Large_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_p_30"
+            android:layout_marginTop="@dimen/dimen_p_8"
+            android:gravity="center"
+            android:text="@string/sign_in_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signInTitle" />
+
+        <ge.ted3x.evenline.components.InputField
+            android:id="@+id/signInEmail"
+            style="@style/BaseInputField.Label"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_p_16"
+            android:drawableStart="@drawable/ic_mail"
+            android:hint="@string/sign_up_email"
+            app:layout_constraintTop_toBottomOf="@id/signInDescription" />
+
+        <ge.ted3x.evenline.components.InputField
+            android:id="@+id/signInPassword"
+            style="@style/BaseInputField.Password"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_p_16"
+            android:hint="@string/sign_up_password"
+            app:layout_constraintTop_toBottomOf="@id/signInEmail" />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            style="@style/Label_Body_Medium_ExtraBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_p_16"
+            android:gravity="center"
+            android:text="@string/sign_in_title"
+            android:textColor="@color/color_grayscale_900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signInPassword" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signInBtn"
+            style="@style/Button_Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_p_24"
+            android:text="@string/sign_in"
+            app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
+
+        <include
+            android:id="@+id/divider"
+            layout="@layout/layout_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_p_24"
+            app:layout_constraintTop_toBottomOf="@id/signInBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/authWithGoogleBtn"
+            style="@style/Button_Social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_p_24"
+            android:text="@string/sign_in_with_google"
+            app:icon="@drawable/ic_google"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <TextView
+            style="@style/Label_Body_Small_Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/sign_in_terms"
+            android:textColor="@color/color_grayscale_400"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
