@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:00 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:30 PM
+ * Last modified 6/25/23, 5:57 PM
  */
 
 package ge.ted3x.evenline.base
@@ -32,7 +32,7 @@ abstract class BaseViewModel(private val dispatcher: CoroutineDispatcher) : View
         }
     }
 
-    protected suspend fun setSnackBarMessage(message: String) {
+    protected suspend fun showSnackbar(message: String) {
         _snackBarMessage.emit(message)
     }
 }

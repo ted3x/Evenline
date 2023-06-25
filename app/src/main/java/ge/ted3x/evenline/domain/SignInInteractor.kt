@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:00 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:30 PM
+ * Last modified 6/25/23, 6:00 PM
  */
 
 package ge.ted3x.evenline.domain
@@ -13,11 +13,10 @@ import javax.inject.Inject
 class SignInInteractor @Inject constructor(
     dispatchers: EvenlineCoroutineDispatchers,
     private val userRepository: UserRepository
-) :
-    BaseInteractor<SignInInteractor.Params, Unit>(dispatchers) {
+) : BaseInteractor<SignInInteractor.Params, Unit>(dispatchers) {
 
     override suspend fun operation(params: Params) {
-        TODO("Not yet implemented")
+        userRepository.signIn(params.email, params.password)
     }
 
     data class Params(val email: String, val password: String)

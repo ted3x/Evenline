@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:00 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:30 PM
+ * Last modified 6/25/23, 6:00 PM
  */
 
 package ge.ted3x.evenline.data
@@ -16,8 +16,8 @@ class UserRepositoryImpl @Inject constructor(private val firebaseAuth: FirebaseA
 
     override suspend fun signIn(email: String, password: String) {
         try {
-            firebaseAuth.signInWithEmailAndPassword(email, password)
-            // TODO store some data
+            val result = firebaseAuth.signInWithEmailAndPassword(email, password).await()
+            if (result.user == null) throw EvenlineException.SignInFailed
         } catch (e: Exception) {
             throw EvenlineException.SignInFailed
         }

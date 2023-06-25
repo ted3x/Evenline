@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:00 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 5:30 PM
+ * Last modified 6/25/23, 5:57 PM
  */
 
 package ge.ted3x.evenline.presentation.signin
@@ -25,6 +25,7 @@ class SignInViewModel @Inject constructor(
         when {
             email.isEmpty() -> "Email is empty"
             password.isEmpty() -> "Password is empty"
+            else -> signIn(email, password)
         }
     }
 
@@ -32,7 +33,7 @@ class SignInViewModel @Inject constructor(
         executeInteractor {
             onExecute { signInInteractor.execute(SignInInteractor.Params(email, password)) }
             onSuccess { router.newRootScreen(Screens.Dashboard()) }
-            onError { }
+            onError { showSnackbar(it.message) }
         }
     }
 }
