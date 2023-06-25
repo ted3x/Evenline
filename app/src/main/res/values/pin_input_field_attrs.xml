@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:15 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/25/23, 11:10 PM
+  -->
+
+<resources>
+    <declare-styleable name="PinInputField">
+        <attr name="pinMaxLength" format="integer"/>
+        <attr name="pinTextStyle" format="reference"/>
+    </declare-styleable>
+</resources>
