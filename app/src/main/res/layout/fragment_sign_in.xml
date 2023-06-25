@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 5:54 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:22 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/25/23, 5:53 PM
+  ~ Last modified 6/25/23, 6:22 PM
   -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -50,6 +50,7 @@
             android:layout_marginTop="@dimen/dimen_p_16"
             android:drawableStart="@drawable/ic_mail"
             android:hint="@string/sign_up_email"
+            android:inputType="textEmailAddress"
             app:layout_constraintTop_toBottomOf="@id/signInDescription" />
 
         <ge.ted3x.evenline.components.InputField
@@ -58,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/dimen_p_16"
             android:hint="@string/sign_up_password"
+            android:maxLength="32"
             app:layout_constraintTop_toBottomOf="@id/signInEmail" />
 
         <TextView
@@ -67,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_p_16"
             android:gravity="center"
-            android:text="@string/sign_in_title"
+            android:text="@string/sign_in_forgot_password"
             android:textColor="@color/color_grayscale_900"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/signInPassword" />

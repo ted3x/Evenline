@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/24/23, 2:13 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 6:22 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/24/23, 2:03 PM
+ * Last modified 6/25/23, 6:20 PM
  */
 
 package ge.ted3x.evenline.components
@@ -10,6 +10,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
+import android.text.InputType
 import android.util.AttributeSet
 import android.view.MotionEvent
 import androidx.core.widget.doOnTextChanged
@@ -107,18 +108,17 @@ class InputField @JvmOverloads constructor(
                         y = x
                     }
                 }
-                if (bounds.contains(x, y) && clickListener != null) {
+                if (bounds.contains(x, y)) {
                     clickListener?.onClick(DrawablePosition.LEFT)
                     event.action = MotionEvent.ACTION_CANCEL
                     return false
                 }
             }
             if (drawableRight != null) {
-                bounds = null
                 bounds = drawableRight!!.bounds
                 var x: Int
                 var y: Int
-                val extraTapArea = 13
+                val extraTapArea = (15 * resources.displayMetrics.density + 0.5).toInt()
                 /**
                  * IF USER CLICKS JUST OUT SIDE THE RECTANGLE OF THE DRAWABLE
                  * THAN ADD X AND SUBTRACT THE Y WITH SOME VALUE SO THAT AFTER
@@ -146,7 +146,8 @@ class InputField @JvmOverloads constructor(
                  * extratapping area value doesn't go into negative value.
                  */if (y <= 0) y = actionY
                 /**If drawble bounds contains the x and y points then move ahead. */
-                if (bounds.contains(x, y) && clickListener != null) {
+                if (bounds.contains(x, y)) {
+                    onRightDrawableClick()
                     clickListener?.onClick(DrawablePosition.RIGHT)
                     event.action = MotionEvent.ACTION_CANCEL
                     return false
@@ -168,6 +169,29 @@ class InputField @JvmOverloads constructor(
         } else {
             context.getDrawable(R.drawable.selector_edit_text)
         }
+    }
+
+    private fun onRightDrawableClick() {
+        when (inputType) {
+            InputType.TYPE_CLASS_TEXT.or(InputType.TYPE_TEXT_VARIATION_PASSWORD) -> {
+                setInputTypeWithPreserving(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
+            }
+            InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD -> {
+                setInputTypeWithPreserving(
+                    InputType.TYPE_CLASS_TEXT.or(InputType.TYPE_TEXT_VARIATION_PASSWORD)
+                )
+            }
+            else -> Unit
+        }
+    }
+
+    private fun setInputTypeWithPreserving(inputType: Int) {
+        val selectionStart = selectionStart
+        val selectionEnd = selectionEnd
+        val typeFace = typeface
+        this.inputType = inputType
+        setSelection(selectionStart, selectionEnd)
+        typeface = typeFace
     }
 }
 
