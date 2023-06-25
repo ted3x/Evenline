@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:40 PM
+  ~ Copyright (c) 2023 . All rights reserved.
+  ~ Last modified 6/25/23, 11:39 PM
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimen_p_24"
+    android:paddingVertical="@dimen/dimen_p_16"
+    tools:context=".presentation.otp.OtpFragment">
+
+    <ImageView
+        android:id="@+id/otpImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/otpTitle"
+        style="@style/Label_Heading.4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_p_40"
+        android:text="@string/otp_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpImage" />
+
+    <TextView
+        android:id="@+id/otpDescription"
+        style="@style/Label_Body_Medium_Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_p_20"
+        android:layout_marginTop="@dimen/dimen_p_8"
+        android:gravity="center"
+        android:text="@string/otp_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpTitle" />
+
+    <ge.ted3x.evenline.components.PinInputField
+        android:id="@+id/otpField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_p_32"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpDescription" />
+
+    <TextView
+        android:id="@+id/otpResend"
+        style="@style/Label_Body_Medium_ExtraBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_p_24"
+        android:text="@string/otp_resend_code"
+        android:textColor="@color/color_primary_base"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otpField" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/otpBtn"
+        style="@style/Button_Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_p_32"
+        android:text="@string/otp_verify"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

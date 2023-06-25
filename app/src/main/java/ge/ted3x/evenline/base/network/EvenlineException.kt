@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:40 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 8:14 PM
+ * Last modified 6/25/23, 11:39 PM
  */
 
 package ge.ted3x.evenline.base.network
@@ -14,4 +14,6 @@ sealed class EvenlineException(override val message: String) : Exception(message
     data class PasswordResetFailed(override val message: String) : EvenlineException(message)
 
     data class PasswordChangeFailed(override val message: String) : EvenlineException(message)
+
+    data class EmailVerifyOtpFailed(override val message: String) : EvenlineException(message)
 }

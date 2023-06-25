@@ -1,7 +1,7 @@
 /*
- * Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:15 PM
+ * Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:40 PM
  * Copyright (c) 2023 . All rights reserved.
- * Last modified 6/25/23, 11:14 PM
+ * Last modified 6/25/23, 11:40 PM
  */
 
 package ge.ted3x.evenline.components
@@ -13,7 +13,9 @@ import android.text.InputFilter
 import android.util.AttributeSet
 import android.view.Gravity
 import androidx.core.content.withStyledAttributes
+import androidx.core.widget.doAfterTextChanged
 import ge.ted3x.evenline.R
+import ge.ted3x.evenline.utils.EvenlineConstants.EVENLINE_OTP_MAX_LENGTH
 
 class PinInputField @JvmOverloads constructor(
     context: Context,
@@ -21,8 +23,11 @@ class PinInputField @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : androidx.appcompat.widget.AppCompatEditText(context, attrs, defStyleAttr) {
 
+    var listener: PinInputCompleteListener? = null
+    val text get() = this.getText().toString()
+
     private val strokeWidth = context.resources.getDimension(R.dimen.dimen_p_1)
-    private val currentSelection get() = if (hasFocus()) text?.length ?: -1 else -1
+    private val currentSelection get() = if (hasFocus()) text.length else -1
 
     // width + radius ( 56 + 12 )
     private val defaultWidth = context.resources.getDimensionPixelSize(R.dimen.dimen_p_68)
@@ -70,6 +75,10 @@ class PinInputField @JvmOverloads constructor(
         background = null
         setWillNotDraw(false)
         requestFocus()
+
+        doAfterTextChanged {
+            if (it?.length == maxLength) listener?.onComplete(it.toString())
+        }
     }
 
     private fun TypedArray.withStyledResource() {
@@ -132,10 +141,9 @@ class PinInputField @JvmOverloads constructor(
                 /* ry = */ cornerRadius,
                 /* paint = */ if (currentSelection == it) selectedFieldStrokePaint else normalFieldPaint
             )
-            val text = text
-            if (!text.isNullOrBlank()) {
+            if (text.isNotBlank()) {
                 if (text.length > it) {
-                    val char = text.toString()[it]
+                    val char = text[it]
                     canvas.drawText(
                         char.toString(),
                         (left + (size / 2)),
@@ -152,7 +160,12 @@ class PinInputField @JvmOverloads constructor(
     }
 
     companion object {
-        private const val DEFAULT_MAX_LENGTH = 4
+        private const val DEFAULT_MAX_LENGTH = EVENLINE_OTP_MAX_LENGTH
         private const val DEFAULT_STYLE_RES = R.style.Label_Heading_4
     }
+}
+
+interface PinInputCompleteListener {
+
+    fun onComplete(pin: String)
 }

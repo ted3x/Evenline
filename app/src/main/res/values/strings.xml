@@ -1,7 +1,7 @@
 <!--
-  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 8:15 PM
+  ~ Created by Tedo Manvelidze(ted3x) on 6/25/23, 11:40 PM
   ~ Copyright (c) 2023 . All rights reserved.
-  ~ Last modified 6/25/23, 8:14 PM
+  ~ Last modified 6/25/23, 11:39 PM
   -->
 
 <resources>
@@ -34,4 +34,8 @@
     <string name="reset_password_description">Please enter a new password for your account.</string>
     <string name="confirm_password">Confirm password</string>
     <string name="reset_password_create_new_password">Create New Password</string>
+    <string name="otp_title">Verification Code</string>
+    <string name="otp_description">We have to send the verification to your email [%s].</string>
+    <string name="otp_verify">Verify</string>
+    <string name="otp_resend_code">Resend code</string>
 </resources>
